@@ -7,8 +7,7 @@ import shapely
 import numpy as np
 import geopandas as gpd
 
-# import geomie3d
-from .geom import geomie3d
+import geomie3d
 
 def estimate_tree_height(tree_path: str, pt_layer_ls: list[str], classification_val: int, percentile: int, z_threshold: float, feedback = None) -> np.ndarray:
     """
