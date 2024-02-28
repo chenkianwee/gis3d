@@ -201,7 +201,7 @@ class treeHeightGrids(QgsProcessingAlgorithm):
     def icon(self):
         cmd_folder = os.path.split(inspect.getfile(inspect.currentframe()))[0]
         cmd_folder = str(pathlib.Path(cmd_folder).parent.absolute())
-        icon = QIcon(os.path.join(os.path.join(cmd_folder, 'tree_logo.png')))
+        icon = QIcon(os.path.join(cmd_folder, 'logo', 'tree_logo.png'))
         return icon
 
     def createInstance(self):

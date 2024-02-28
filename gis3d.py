@@ -61,12 +61,12 @@ class gis3dPlugin(object):
     def initGui(self):
         self.initProcessing()
 
-        icon_tree = os.path.join(os.path.join(cmd_folder, 'tree_logo.png'))
+        icon_tree = os.path.join(cmd_folder, 'logo', 'tree_logo.png')
         self.action_tree = QAction( QIcon(icon_tree), u"tree_height_grids", self.iface.mainWindow())
         self.action_tree.triggered.connect(self.run_estimate_tree_heights)
 
-        icon_ext = os.path.join(os.path.join(cmd_folder, 'ext_logo.png'))
-        self.action_ext = QAction( QIcon(icon_ext), u"extrude3d", self.iface.mainWindow())
+        icon_ext = os.path.join(cmd_folder, 'logo', 'ext_logo.png')
+        self.action_ext = QAction(QIcon(icon_ext), u"extrude3d", self.iface.mainWindow())
         self.action_ext.triggered.connect(self.run_extrude3d)
 
         self.iface.addPluginToMenu(u"&gis3d", self.action_tree)

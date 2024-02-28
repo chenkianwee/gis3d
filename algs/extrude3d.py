@@ -189,7 +189,7 @@ class extrude3D(QgsProcessingAlgorithm):
     def icon(self):
         cmd_folder = os.path.split(inspect.getfile(inspect.currentframe()))[0]
         cmd_folder = str(pathlib.Path(cmd_folder).parent.absolute())
-        icon = QIcon(os.path.join(os.path.join(cmd_folder, 'ext_logo.png')))
+        icon = QIcon(os.path.join(cmd_folder, 'logo', 'ext_logo.png'))
         return icon
 
     def createInstance(self):
